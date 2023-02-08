@@ -17,7 +17,7 @@ To use this chip in your project, include it as a dependency in your `diagram.js
 
 ```json
   "dependencies": {
-    "chip-debounce": "github:Dlloydev/Wokwi-Chip-Debounce@1.0.1"
+    "chip-debounce": "github:Dlloydev/Wokwi-Chip-Debounce@1.0.2"
   }
 ```
 
