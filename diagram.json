@@ -3,46 +3,23 @@
   "author": "Dlloydev",
   "editor": "wokwi",
   "parts": [
-    { "type": "chip-pwm", "id": "pwm1", "top": -173, "left": -167.02, "rotate": 90, "attrs": {} },
-    {
-      "type": "chip-bounce",
-      "id": "bounce1",
-      "top": -173,
-      "left": -119.02,
-      "rotate": 90,
-      "attrs": {}
-    },
-    {
-      "type": "chip-debounce",
-      "id": "debounce1",
-      "top": -173,
-      "left": -73.84,
-      "rotate": 90,
-      "attrs": {}
-    },
-    { "type": "wokwi-logic-analyzer", "id": "logic1", "top": -95.65, "left": 38.4, "attrs": {} },
-    { "type": "wokwi-vcc", "id": "pwr2", "top": -277.64, "left": -153.6, "attrs": {} },
-    { "type": "wokwi-gnd", "id": "gnd4", "top": 0, "left": 18.6, "attrs": {} },
-    { "type": "wokwi-gnd", "id": "gnd1", "top": -211.2, "left": -154.2, "attrs": {} }
+    { "type": "chip-pwm", "id": "pwm1", "top": -66.18, "left": -415.79, "attrs": {} },
+    { "type": "chip-bounce", "id": "bounce1", "top": -66.18, "left": -273.6, "attrs": {} },
+    { "type": "chip-debounce", "id": "debounce1", "top": -66.18, "left": -129.6, "attrs": {} },
+    { "type": "wokwi-logic-analyzer", "id": "logic1", "top": -95.65, "left": 19.2, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": 0, "left": -0.6, "attrs": {} }
   ],
   "connections": [
-    [ "gnd4:GND", "bounce1:RISE", "green", [ "v0" ] ],
-    [ "logic1:GND", "gnd4:GND", "black", [ "h0" ] ],
-    [ "gnd1:GND", "pwm1:GND", "black", [ "v-19.2", "h28.8" ] ],
-    [ "gnd1:GND", "bounce1:GND", "black", [ "v-19.2", "h57.6" ] ],
-    [ "pwr2:VCC", "pwm1:VCC", "red", [ "v9.6", "h38.4" ] ],
-    [ "pwr2:VCC", "bounce1:VCC", "red", [ "v9.6", "h19.2" ] ],
-    [ "pwr2:VCC", "debounce1:VCC", "red", [ "v9.6", "h9.6" ] ],
-    [ "gnd1:GND", "debounce1:GND", "black", [ "v-19.2", "h86.4" ] ],
-    [ "pwm1:OUT", "bounce1:IN", "blue", [ "v21.01", "h19.2" ] ],
-    [ "bounce1:OUT", "debounce1:IN", "orange", [ "v30.61", "h19.2" ] ],
-    [ "debounce1:OUT", "logic1:D2", "limegreen", [ "v49.81" ] ],
-    [ "debounce1:IN", "logic1:D1", "orange", [ "h0", "v40.21" ] ],
-    [ "bounce1:IN", "logic1:D0", "blue", [ "h0", "v40.21" ] ]
+    [ "logic1:GND", "gnd1:GND", "black", [ "h0" ] ],
+    [ "pwm1:OUT", "bounce1:IN", "blue", [ "v0" ] ],
+    [ "pwm1:OUT", "logic1:D0", "blue", [ "v0", "h19.2", "v-28.8" ] ],
+    [ "bounce1:OUT", "debounce1:IN", "purple", [ "v0" ] ],
+    [ "bounce1:OUT", "logic1:D1", "purple", [ "v0", "h21.01", "v-28.8" ] ],
+    [ "debounce1:OUT", "logic1:D2", "green", [ "v0", "h21.01", "v-19.2" ] ]
   ],
   "dependencies": {
-    "chip-pwm": "github:Dlloydev/Wokwi-Chip-PWM@1.0.2",
-    "chip-bounce": "github:Dlloydev/Wokwi-Chip-Bounce@1.0.1",
-    "chip-debounce": "github:Dlloydev/Wokwi-Chip-Debounce@1.0.0"
+    "chip-pwm": "github:Dlloydev/Wokwi-Chip-PWM@1.0.3",
+    "chip-bounce": "github:Dlloydev/Wokwi-Chip-Bounce@1.0.4",
+    "chip-debounce": "github:Dlloydev/Wokwi-Chip-Debounce@1.0.1"
   }
 }

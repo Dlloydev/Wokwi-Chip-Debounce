@@ -8,9 +8,8 @@ This custom chip for [Wokwi](https://wokwi.com/) cleans the transitions of a noi
 
 | Name | Description                            |
 | ---- | -------------------------------------- |
+| IN   | Signal Input                           |
 | OUT  | Debounced and Deglitched Signal Output |
-| GND  | Ground                                 |
-| VCC  | Supply voltage                         |
 
 ## Usage
 
@@ -18,7 +17,7 @@ To use this chip in your project, include it as a dependency in your `diagram.js
 
 ```json
   "dependencies": {
-    "chip-debounce": "github:Dlloydev/Wokwi-Chip-Debounce@1.0.0"
+    "chip-debounce": "github:Dlloydev/Wokwi-Chip-Debounce@1.0.1"
   }
 ```
 
